@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect } from "react"
 
 function SearchResults({ searchQuery }) {
@@ -24,15 +23,15 @@ function SearchResults({ searchQuery }) {
   return (
          <div>
           <h2>Search Results:</h2>
-          <ul>
+          
             {searchResults.map((result) => (
-              <li key={result.pageid}>
+              <p key={result.pageid}>
                 <a href={`https://en.wikipedia.org/wiki/${result.title}`} target="_blank" rel="noopener noreferrer">
                   {result.title}
                 </a>
-              </li>
+              </p>
             ))}
-          </ul>
+         
         </div>
       );
 }
